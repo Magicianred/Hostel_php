@@ -3,17 +3,25 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-// Controller must return an instance https://stackoverflow.com/questions/14878057/the-controller-must-return-a-response/14878347
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
 {
+    // Homepage Route
     /**
      * @Route("/")
      */
     public function home()
     {
         return $this->render('home.html.twig');
+    }
+
+    // Signup Route
+    /**
+     * @Route("/signup")
+     */
+    public function check()
+    {
+        return $this->render('signup.html.twig');
     }
 }
