@@ -1,78 +1,28 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HostelLand!</title>
-    <link rel="stylesheet" href="{{asset('style/home.css')}}" />
+{% include 'head.html.twig' %}
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-    />
-    
-  </head>
-  <body>
-         <header>
-      <nav class="navbar p-4" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="#">
-            <h1 class="is-size-2">Hostelly</h1>
-          </a>
+<body>
+	{% include 'navigation.html.twig' %}
 
-          <a
-            role="button"
-            class="navbar-burger burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
+	<figure id="mainPhotoContainer" class="image is-2by1">
+		<img src="{{asset('images/sunset-4296611_1920.jpg')}}">
+	</figure>
 
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item"> How does it work </a>
-          </div>
+	<div id="firstRow" class="container">
+		<div class="columns is-gapless is-vcentered has-text-centered">
+			<div class="column">
+				Signup 🐱‍🏍
+			</div>
+			<div class="column">
+				Book 💳
+			</div>
+			<div class="column">
+				Enjoy ☀
+			</div>
+		</div>
+	</div>
 
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-              <a class="button is-light"> Log in </a>
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-  
 
-    <figure id="mainPhotoContainer" class="image is-2by1">
-  <img src="{{asset('images/sunset-4296611_1920.jpg')}}">
-</figure>
+	{% include 'footer.html.twig' %}
 
-<div id="firstRow" class="container">
-<div class="columns is-gapless is-vcentered has-text-centered">
-  <div class="column">
-    Signup 🐱‍🏍
-  </div>
-  <div class="column">
-    Book 💳
-  </div>
-  <div class="column">
-    Enjoy ☀
-  </div>
-</div>
-</div>
-      
-    <script src="{{ asset('js/index.js') }}"></script>
 
-  </body>
-</html>
+</body></html>
