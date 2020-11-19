@@ -7,6 +7,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
 {
+
+
     // Homepage Route
     /**
      * @Route("/")
