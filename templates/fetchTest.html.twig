@@ -1,3 +1,43 @@
+{% include 'head.html.twig' %}
+
+
+
+{% block myJavascript %}
+<script type="text/javascript">
+</script>
+{% endblock %}  
+
+<form>
+  <label for="cars">Choose a car:</label>
+  <select>
+  {% for data in hostel %}
+    <option value="{{data.location}}">{{data.location}}</option>
+    {% endfor %}
+  </select>
+  <br><br>
+  <input id="filterHostel" type="submit" value="Submit">
+</form>
+
+
+
+<div class="columns  is-multiline">
 {% for data in hostel %}
-    <li>{{data.name}}</li>
+ <div class="column">
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-128x128	">
+      <img src={{data.image}} alt="Placeholder image">
+    </figure>
+  </div>
+  <div>
+    <div class="media">
+    <div class="content">
+      {{data.location}}
+          </div>
+
+    </div>
+  </div>
+</div>
+</div>
 {% endfor %}
+</div>

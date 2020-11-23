@@ -3,6 +3,10 @@
 }
 
 .columns {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   padding: 3rem 0;
+}
+
+.card {
+  width: 100px;
 }

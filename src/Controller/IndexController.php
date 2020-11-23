@@ -28,15 +28,16 @@ class IndexController extends AbstractController
         return $this->render('signup.html.twig');
     }
 
-    // Signup Route
+    // fetch Route
     /**
      * @Route("/fetch")
      */
     public function fetch()
     {
+
+        // Create custom query
         $hostel = $this->getDoctrine()
             ->getRepository(Hostelly::class)
-            // ->find(1)
             ->findAll();
         return $this->render(
             'fetchTest.html.twig',

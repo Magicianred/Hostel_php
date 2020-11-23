@@ -25,12 +25,27 @@ class Hostelly
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $lastname;
+    private $location;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="float")
      */
-    private $nationality;
+    private $price;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $image;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $bedsleft;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $pets;
 
     public function getId(): ?int
     {
@@ -49,26 +64,62 @@ class Hostelly
         return $this;
     }
 
-    public function getLastname(): ?string
+    public function getLocation(): ?string
     {
-        return $this->lastname;
+        return $this->location;
     }
 
-    public function setLastname(string $lastname): self
+    public function setLocation(string $location): self
     {
-        $this->lastname = $lastname;
+        $this->location = $location;
 
         return $this;
     }
 
-    public function getNationality(): ?string
+    public function getPrice(): ?float
     {
-        return $this->nationality;
+        return $this->price;
     }
 
-    public function setNationality(string $nationality): self
+    public function setPrice(float $price): self
     {
-        $this->nationality = $nationality;
+        $this->price = $price;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getBedsleft(): ?int
+    {
+        return $this->bedsleft;
+    }
+
+    public function setBedsleft(int $bedsleft): self
+    {
+        $this->bedsleft = $bedsleft;
+
+        return $this;
+    }
+
+    public function getPets(): ?bool
+    {
+        return $this->pets;
+    }
+
+    public function setPets(bool $pets): self
+    {
+        $this->pets = $pets;
 
         return $this;
     }
